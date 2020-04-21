@@ -6,7 +6,8 @@ from datetime import datetime, date
 class Post(models.Model):
 	title = models.CharField(max_length=255)
 	author = models.ForeignKey(User, on_delete=models.CASCADE)
-	post_date = models.DateField(auto_now_add = True)
+	post_date = models.DateField()
+	post_update_date = models.DateField()
 	body = models.TextField()
 	download1n = models.CharField(max_length=255)
 	download1 = models.CharField(max_length=255)
