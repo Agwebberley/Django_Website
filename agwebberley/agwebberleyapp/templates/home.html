@@ -1,9 +1,13 @@
 <!DOCTYPE html>
+{% extends 'base.html' %}
 <html>
 <head>
-	<title>Home</title>
+	<title>{% block title %}Agwebberley's Portfolio{% endblock %}</title>
 </head>
 <body>
+
+{% block content %}
+
 <h1>Post</h1>
 
 <ul>
@@ -12,5 +16,7 @@
 	{{ post.body }}</li>
 {%endfor%}
 </ul>
+
+{% endblock %}
 </body>
 </html>
