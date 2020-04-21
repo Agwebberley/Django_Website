@@ -2,7 +2,7 @@
 {% extends 'base.html' %}
 <html>
 <head>
-	<title>test</title>
+	<title>{{ post.title }}</title>
 </head>
 <body>
 
@@ -16,6 +16,15 @@
 
 <br>
 <br>
+
+
+<h3>Downloads</h3>
+<br>
+<h4><a href="{{ post.download1 }}">{{ post.download1n }}</a></h4>
+<h4><a href="{{ post.download2 }}">{{ post.download2n }}</a></h4>
+<br>
+<br>
+
 <a href="{% url 'home' %}" class="btn btn-secondary" >Back</a>
 
 {% endblock %}
