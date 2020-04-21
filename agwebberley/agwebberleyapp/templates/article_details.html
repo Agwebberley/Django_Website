@@ -10,7 +10,8 @@
 
 
 <h1>{{ post.title }}</h1>
-<small>By: {{ post.author.first_name }} {{ post.author.last_name }}</small>
+<small>By: {{ post.author.first_name }} {{ post.author.last_name }} - <a href="{% url 'update_post' post.pk  %}">(edit)</a> - <a href="{% url 'delete_post' post.pk  %}">(delete)</a></small>
+<h3>Created: </h3>
 <br>
 {{ post.body }}
 

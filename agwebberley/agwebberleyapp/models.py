@@ -1,10 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+from datetime import datetime, date
 
 class Post(models.Model):
 	title = models.CharField(max_length=255)
 	author = models.ForeignKey(User, on_delete=models.CASCADE)
+	post_date = models.DateField(auto_now_add = True)
 	body = models.TextField()
 	download1n = models.CharField(max_length=255)
 	download1 = models.CharField(max_length=255)
@@ -16,3 +18,4 @@ class Post(models.Model):
 
 	def get_absolute_url(self):
 		return reverse('article-detail', args=(str(self.id)))
+
