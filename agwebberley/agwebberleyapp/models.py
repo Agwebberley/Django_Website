@@ -9,10 +9,10 @@ class Post(models.Model):
 	post_date = models.DateField()
 	post_update_date = models.DateField()
 	body = models.TextField()
-	download1n = models.CharField(max_length=255)
-	download1 = models.CharField(max_length=255)
-	download2n = models.CharField(max_length=255)
-	download2 = models.CharField(max_length=255)
+	download1n = models.CharField(max_length=255, blank=True)
+	download1 = models.CharField(max_length=255, blank=True)
+	download2n = models.CharField(max_length=255, blank=True)
+	download2 = models.CharField(max_length=255, blank=True)
 
 	def __str__(self):
 		return self.title + ' | ' + str(self.author)

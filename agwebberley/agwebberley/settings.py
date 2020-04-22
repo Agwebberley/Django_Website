@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&cj0jmz9x7__$@zgm%j^0m%!vn$m38k1)=_9s%jwc@sj883!z8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['agwebberley.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -123,4 +123,4 @@ STATIC_URL = '/static/'
 
 
 LOGIN_REDIRECT_URL = 'home'
-LOGINOUT_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
