@@ -7,6 +7,7 @@
 <body>
 {% block content %}
 
+{% if user.is_authenticated %}
 
 <center><h1>Add Post</h1></center>
 <br>
@@ -18,6 +19,9 @@
 </form>
 </div>
 
+{% else %}
+<center><h1>You are NOT allowed here.  (Either Log In or SCRAM) <br> <a href="home.html">GO HOME</a></h1></center>
+{% endif %}
 {% endblock %}
 </body>
 </html>
